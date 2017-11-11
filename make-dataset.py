@@ -25,11 +25,11 @@ def main(args):
     query = args.search
     max_images = args.num_images
     save_directory = args.directory
-    print "[Saving to: " + str(save_directory) + "]"
+
     if not query or not max_images:
         parser.print_help()
         return
-    
+    print "[Saving to: " + str(save_directory) + "]"    
     query = query.split(',')
     for q in query:
         url = "https://www.google.co.in/search?q=" + urllib2.quote(q) + "&source=lnms&tbm=isch"
